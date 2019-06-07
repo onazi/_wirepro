@@ -1,0 +1,267 @@
+
+.--activeheader{
+    border-bottom: 2px solid #ccc;
+
+    
+}
+.sectionone{
+    @include respond(tab-port){
+        
+    }
+
+    &__logo{
+        font-size: 2rem;
+        font-family: $font-head;
+        color: $color-primary;
+
+
+        @include respond(tab-port){
+
+            font-size: 1.6rem;
+        }
+    }
+
+
+    &__img{
+        padding-top: 6rem;
+        
+        @include respond(phone){
+            display: none;
+
+
+        }
+    }
+
+    &__image{
+        width: 100%;
+    }
+
+    &__text{
+        font-size: $default-font-size;
+        text-align: center;
+        margin-top: 10.5rem;
+
+        
+        @include respond(phone){
+            margin-top: 60rem;
+        }
+
+    }
+}
+
+img{
+    width: 100%;
+}
+.sectiontwo{
+    background-color: $color-primary;
+    padding: 10rem 8rem;
+
+
+    @include respond(tab-port){
+        padding: 5rem 8rem;
+
+    }
+}
+.form {
+    background-color: $color-light;
+    border-radius: 6px 6px 0px 0px;
+    padding-bottom: 4rem;
+
+    @include respond(tab-port){
+        margin-left: -5rem;
+        margin-right: -5rem;
+    }
+
+
+    &__head{
+        background-color: $color-secondary;
+        width: 100%;
+        border-radius: 6px 6px 2px 2px;
+        padding-left: 8rem;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+
+
+        @include respond(tab-port){
+            padding-left: 2rem;  
+        }
+
+
+    }
+
+    &__heading{
+        display: inline-block;
+        font-size: 1.7rem;
+        font-family: $font-head;
+        padding: 2rem;
+
+
+        @include respond(tab-port){
+            font-size: 1.5rem;
+    
+        }
+        
+        &--1{
+           color: $color-light;
+
+        }
+        &--2{
+            margin-left: 2rem;
+            color: $color-light;
+            opacity: .7;
+            
+            
+        }
+
+
+    }
+
+    &__group:not(:last-child){
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 7rem;
+        font-size: 1.5rem;
+        font-family:  $font-body;
+
+
+        @include respond(tab-port){
+            margin-left: 2rem;
+
+        }
+    }
+
+
+    &__input{
+        display: block;
+        width: 80%;
+        padding: 1.5rem 0.3rem;
+        border-top-style: none;
+        border-right-style: none;
+        border-left-style: none;
+        font-size: 1.2rem;
+
+
+        @include respond(tab-port){
+            width: 90%;
+        }
+
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 3px 6px rgba($color-secondary, .5);
+            border-bottom: 3px $color-primary solid;  
+            
+            &:invalid {
+                border-bottom: 3px red solid; 
+            }
+        }  
+    
+    }
+
+    &__text{
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 1.4rem;
+        font-family: $font-head;
+    }
+
+    &__label{
+        font-size: 1.3rem;
+        display: block;  
+        transition: all .3s;   
+    }
+}
+
+
+.signPopUp{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .9);
+    z-index: 9999;
+    backdrop-filter: blur(20px);
+
+   opacity: 0;
+   visibility: hidden;
+   transition: all .5s;
+
+    &__cover {
+        background-color: $color-light; 
+        @include centerMiddle;
+        width: 45%;
+        color: black;
+        padding: 1.5rem 5rem;
+        box-shadow: 0 55px 99px black;
+        border-radius: 5px;
+        transform: translate(-50% -50%) scale(.5);
+        transition: all .3s .2s;
+
+
+
+        @include respond(tab-port){
+             
+            
+        }
+    }
+
+
+    &__close{
+        &:link,
+        &:visited{
+            position: absolute;
+            top: -0.5rem;
+            right: 2.5rem;
+            font-size: 4rem;
+            text-decoration: none;
+            color: black;
+        }
+       
+    }
+    
+    &__heading {
+        background-color: $color-secondary;
+        margin-top: 3.5rem;
+        border-radius: 2px 2px;
+        font-family: $font-head;
+        font-weight: 300;
+
+
+        &--1{
+            font-size: 2rem;
+            font-display: $font-head;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;    
+        }
+    }
+    &__text{
+        font-size: 1.6rem;
+        margin-top: 2.5rem;
+        margin-bottom: 5rem;
+        font-display: $font-body;
+        
+        @include respond(tab-port){
+            font-size: 1.4rem;
+        }
+
+    }
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__cover{
+        opacity: 1;
+        transform: translate(-50% -50%) scale(1);
+        
+    }
+}
+
+
+
+
+
+

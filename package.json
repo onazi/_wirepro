@@ -1,0 +1,14 @@
+{
+  "name": "wirepro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss style.css -w"
+  },
+  "author": "Victor Onazi",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

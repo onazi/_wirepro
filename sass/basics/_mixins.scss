@@ -1,0 +1,48 @@
+@mixin clearFix {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+}
+@mixin centerMiddle {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    @include respond(tab-port){
+        top: 65%;
+        transform: translate(-50%, -40%);
+    }
+}
+
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == phone{
+        @media (max-width: 37.5rem){ //600px
+            @content
+        };
+    }
+    @if $breakpoint == tab-port{
+        @media (max-width: 56.26rem){ //900px
+            @content
+        };
+    }
+    @if $breakpoint == tab-land{
+        @media (max-width: 75rem){ //1200px
+            @content
+        };
+    }
+    @if $breakpoint == big-screen{
+        @media (min-width: 112.5rem){ //1800px
+            @content
+        };
+    }
+
+    
+}

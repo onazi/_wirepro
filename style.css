@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato" , sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 3rem; }
+
+.btn {
+  margin-top: 2rem;
+  margin-left: 7rem;
+  color: #ffff;
+  border-radius: 4px;
+  border: 0px;
+  font-size: 1.7rem;
+  box-shadow: 0 3px 6px #ccc;
+  text-decoration: none; }
+  @media (max-width: 37.5rem) {
+    .btn {
+      font-size: 1.5rem;
+      margin-left: 5rem; } }
+  @media (max-width: 56.26rem) {
+    .btn {
+      font-size: 1.5rem;
+      margin-left: 5rem; } }
+  .btn--submit {
+    font-family: "Montserrat", sans-serif;
+    padding: 1rem 12rem;
+    background-color: #5C33B9; }
+    @media (max-width: 56.26rem) {
+      .btn--submit {
+        padding: 1rem 8rem; } }
+
+.row {
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 8rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 8rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 8rem) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 8rem) / 4); }
+
+.--activeheader {
+  border-bottom: 2px solid #ccc; }
+
+.sectionone__logo {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #6E00FF; }
+  @media (max-width: 56.26rem) {
+    .sectionone__logo {
+      font-size: 1.6rem; } }
+
+.sectionone__img {
+  padding-top: 6rem; }
+  @media (max-width: 37.5rem) {
+    .sectionone__img {
+      display: none; } }
+
+.sectionone__image {
+  width: 100%; }
+
+.sectionone__text {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 10.5rem; }
+  @media (max-width: 37.5rem) {
+    .sectionone__text {
+      margin-top: 60rem; } }
+
+img {
+  width: 100%; }
+
+.sectiontwo {
+  background-color: #6E00FF;
+  padding: 10rem 8rem; }
+  @media (max-width: 56.26rem) {
+    .sectiontwo {
+      padding: 5rem 8rem; } }
+
+.form {
+  background-color: #ffff;
+  border-radius: 6px 6px 0px 0px;
+  padding-bottom: 4rem; }
+  @media (max-width: 56.26rem) {
+    .form {
+      margin-left: -5rem;
+      margin-right: -5rem; } }
+  .form__head {
+    background-color: #5C33B9;
+    width: 100%;
+    border-radius: 6px 6px 2px 2px;
+    padding-left: 8rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem; }
+    @media (max-width: 56.26rem) {
+      .form__head {
+        padding-left: 2rem; } }
+  .form__heading {
+    display: inline-block;
+    font-size: 1.7rem;
+    font-family: "Montserrat", sans-serif;
+    padding: 2rem; }
+    @media (max-width: 56.26rem) {
+      .form__heading {
+        font-size: 1.5rem; } }
+    .form__heading--1 {
+      color: #ffff; }
+    .form__heading--2 {
+      margin-left: 2rem;
+      color: #ffff;
+      opacity: .7; }
+  .form__group:not(:last-child) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 7rem;
+    font-size: 1.5rem;
+    font-family: "Roboto Condensed", sans-serif; }
+    @media (max-width: 56.26rem) {
+      .form__group:not(:last-child) {
+        margin-left: 2rem; } }
+  .form__input {
+    display: block;
+    width: 80%;
+    padding: 1.5rem 0.3rem;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    font-size: 1.2rem; }
+    @media (max-width: 56.26rem) {
+      .form__input {
+        width: 90%; } }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 3px 6px rgba(92, 51, 185, 0.5);
+      border-bottom: 3px #6E00FF solid; }
+      .form__input:focus:invalid {
+        border-bottom: 3px red solid; }
+  .form__text {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: "Montserrat", sans-serif; }
+  .form__label {
+    font-size: 1.3rem;
+    display: block;
+    transition: all .3s; }
+
+.signPopUp {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  backdrop-filter: blur(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s; }
+  .signPopUp__cover {
+    background-color: #ffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    color: black;
+    padding: 1.5rem 5rem;
+    box-shadow: 0 55px 99px black;
+    border-radius: 5px;
+    transform: translate(-50% -50%) scale(0.5);
+    transition: all .3s .2s; }
+    @media (max-width: 56.26rem) {
+      .signPopUp__cover {
+        top: 65%;
+        transform: translate(-50%, -40%); } }
+  .signPopUp__close:link, .signPopUp__close:visited {
+    position: absolute;
+    top: -0.5rem;
+    right: 2.5rem;
+    font-size: 4rem;
+    text-decoration: none;
+    color: black; }
+  .signPopUp__heading {
+    background-color: #5C33B9;
+    margin-top: 3.5rem;
+    border-radius: 2px 2px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300; }
+    .signPopUp__heading--1 {
+      font-size: 2rem;
+      font-display: "Montserrat", sans-serif;
+      text-align: center;
+      color: white;
+      text-transform: uppercase; }
+  .signPopUp__text {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+    font-display: "Roboto Condensed", sans-serif; }
+    @media (max-width: 56.26rem) {
+      .signPopUp__text {
+        font-size: 1.4rem; } }
+  .signPopUp:target {
+    opacity: 1;
+    visibility: visible; }
+  .signPopUp:target .signPopUp__cover {
+    opacity: 1;
+    transform: translate(-50% -50%) scale(1); }

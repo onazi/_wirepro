@@ -1,14 +1,7 @@
-
-.--activeheader{
-    border-bottom: 2px solid #ccc;
-
-    
-}
 .sectionone{
     @include respond(tab-port){
         
     }
-
     &__logo{
         font-size: 2rem;
         font-family: $font-head;
@@ -62,6 +55,65 @@ img{
 
     }
 }
+
+.formHead{
+    background-color: $color-secondary;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;   
+    padding: 0 5rem;
+
+   
+    &__heading{
+        display: inline-block;
+        font-size: 1.7rem;
+        font-family: $font-head;
+        padding: 2rem; 
+        background-color: $color-secondary;
+        cursor: pointer;
+        border: none;
+
+        &:focus {
+            outline: none;
+            //color: red;
+            
+        }
+
+        @include respond(tab-port){
+            font-size: 1.5rem;
+    
+        }
+        
+        &--1{
+           color: $color-light;
+           //opacity: .7;
+            
+
+        }
+        &--2{
+
+            color: $color-light;
+            //opacity: .7;
+            
+            
+        }
+
+
+    }
+
+
+}
+#refresh1 {
+    display: none;
+}
+
+.--activeheader{
+    border-bottom: 5px solid white;
+    font-weight: 600;
+}
+
+
 .form {
     background-color: $color-light;
     border-radius: 6px 6px 0px 0px;
@@ -71,6 +123,7 @@ img{
         margin-left: -5rem;
         margin-right: -5rem;
     }
+
 
 
     &__head{

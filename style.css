@@ -31,7 +31,7 @@ body {
       margin-left: 5rem; } }
   .btn--submit {
     font-family: "Montserrat", sans-serif;
-    padding: 1rem 12rem;
+    padding: 1rem 18rem;
     background-color: #5C33B9; }
     @media (max-width: 56.26rem) {
       .btn--submit {
@@ -55,9 +55,6 @@ body {
     width: calc((100% - 2 * 8rem) / 3); }
   .row .col-1-of-4 {
     width: calc((100% - 3 * 8rem) / 4); }
-
-.--activeheader {
-  border-bottom: 2px solid #ccc; }
 
 .sectionone__logo {
   font-size: 2rem;
@@ -93,6 +90,38 @@ img {
   @media (max-width: 56.26rem) {
     .sectiontwo {
       padding: 5rem 8rem; } }
+
+.formHead {
+  background-color: #5C33B9;
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
+  padding: 0 5rem; }
+  .formHead__heading {
+    display: inline-block;
+    font-size: 1.7rem;
+    font-family: "Montserrat", sans-serif;
+    padding: 2rem;
+    background-color: #5C33B9;
+    cursor: pointer;
+    border: none; }
+    .formHead__heading:focus {
+      outline: none; }
+    @media (max-width: 56.26rem) {
+      .formHead__heading {
+        font-size: 1.5rem; } }
+    .formHead__heading--1 {
+      color: #ffff; }
+    .formHead__heading--2 {
+      color: #ffff; }
+
+#refresh1 {
+  display: none; }
+
+.--activeheader {
+  border-bottom: 5px solid white;
+  font-weight: 600; }
 
 .form {
   background-color: #ffff;
